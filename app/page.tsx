@@ -60,6 +60,10 @@ export default function LandingPage() {
     document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" })
   }
 
+  const scrollToTestimonials = () => {
+    document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -197,12 +201,7 @@ export default function LandingPage() {
             <Button
               variant="link"
               className="text-transparent bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text font-semibold hover:from-blue-700 hover:to-violet-700 p-0 h-auto hover:scale-105 transition-all duration-300"
-              onClick={() =>
-                window.open(
-                  "https://www.google.com/search?q=maxmarketpros&oq=maxmarketpros+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhAAGB4yBggDEEUYQTIGCAQQRRhBMgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEIMjUyMWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#",
-                  "_blank",
-                )
-              }
+              onClick={scrollToTestimonials}
             >
               See Testimonials →
             </Button>
@@ -359,7 +358,7 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/30 to-violet-50/20">
+      <section id="testimonials" className="py-24 bg-gradient-to-br from-blue-50/30 to-violet-50/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
